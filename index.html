@@ -34,11 +34,278 @@
     }
 
     .page {
+      display: none;
       width: min(100%, var(--canvas));
       margin: 0 auto;
       background: var(--paper);
       box-shadow: 0 24px 70px rgba(36, 25, 17, .22);
       position: relative;
+    }
+
+    .mobile-site {
+      display: block;
+      width: min(100%, 430px);
+      margin: 0 auto;
+      background: #fbf6ed;
+      color: var(--ink);
+      box-shadow: 0 18px 54px rgba(36, 25, 17, .18);
+    }
+
+    .mobile-section {
+      padding: 42px 24px;
+    }
+
+    .mobile-hero {
+      min-height: 76svh;
+      padding: 22px 22px 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fffaf1;
+      background:
+        linear-gradient(180deg, rgba(8, 6, 4, .62), rgba(8, 6, 4, .16) 38%, rgba(8, 6, 4, .9)),
+        linear-gradient(90deg, rgba(8, 6, 4, .92), rgba(8, 6, 4, .3) 72%),
+        url("assets/photos/2021-04-08-12.jpg") 38% center / cover no-repeat;
+    }
+
+    .mobile-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: inherit;
+      text-decoration: none;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 17px;
+      letter-spacing: .04em;
+    }
+
+    .mobile-mark {
+      width: 27px;
+      height: 27px;
+      border: 1.4px solid currentColor;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .mobile-mark::before,
+    .mobile-mark::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      right: 5px;
+      top: 12px;
+      height: 1.4px;
+      background: currentColor;
+      transform: rotate(45deg);
+    }
+
+    .mobile-mark::after {
+      transform: rotate(-45deg);
+    }
+
+    .mobile-hero h1,
+    .mobile-section h2 {
+      margin: 0;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-weight: 500;
+      letter-spacing: .02em;
+    }
+
+    .mobile-hero h1 {
+      font-size: 32px;
+      line-height: 1.55;
+    }
+
+    .mobile-hero p {
+      margin: 16px 0 0;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 13px;
+      line-height: 1.9;
+      color: #f4e3cc;
+    }
+
+    .mobile-eyebrow {
+      margin: 0 0 10px;
+      color: #b98a4a;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .mobile-section h2 {
+      font-size: 25px;
+      line-height: 1.5;
+    }
+
+    .mobile-copy {
+      margin: 16px 0 0;
+      color: #5f5145;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .mobile-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 24px;
+      border-radius: 8px;
+      box-shadow: 0 16px 34px rgba(47, 33, 20, .14);
+    }
+
+    .mobile-concept {
+      padding: 54px 24px;
+      color: #fffaf1;
+      background: #151008;
+    }
+
+    .mobile-concept .mobile-copy {
+      color: #f1dfc7;
+    }
+
+    .mobile-concept img {
+      opacity: .88;
+      box-shadow: none;
+      border-radius: 0;
+      -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 84%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(180deg, transparent 0%, #000 16%, #000 84%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+      mask-composite: intersect;
+    }
+
+    .mobile-menu-section {
+      padding-bottom: 26px;
+    }
+
+    .mobile-staff-section {
+      padding-top: 28px;
+      padding-bottom: 30px;
+    }
+
+    .mobile-scenes-section {
+      padding-top: 28px;
+    }
+
+    .mobile-menu-grid,
+    .mobile-staff-grid,
+    .mobile-gallery-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .mobile-card {
+      overflow: hidden;
+      border: 1px solid rgba(71, 50, 32, .14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .76);
+      box-shadow: 0 12px 26px rgba(47, 33, 20, .08);
+    }
+
+    .mobile-card img {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .mobile-card-body {
+      padding: 16px 18px 18px;
+    }
+
+    .mobile-card h3 {
+      margin: 0;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .mobile-card p {
+      margin: 7px 0 0;
+      color: #6b5a4b;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .mobile-role {
+      margin: 0 0 4px;
+      color: #b98a4a;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .mobile-price {
+      margin-top: 10px;
+      text-align: right;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 16px;
+    }
+
+    .mobile-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      height: 46px;
+      margin-top: 22px;
+      border: 1px solid rgba(57, 39, 25, .56);
+      border-radius: 999px;
+      color: #241a13;
+      background: rgba(255, 255, 255, .66);
+      text-decoration: none;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .mobile-button::after {
+      content: "→";
+    }
+
+    .mobile-gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .mobile-gallery-grid img {
+      width: 100%;
+      height: 118px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .mobile-access-card {
+      margin-top: 22px;
+      padding: 16px;
+      border: 1px solid rgba(71, 50, 32, .14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .76);
+    }
+
+    .mobile-access-card img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .mobile-access-card h3 {
+      margin: 18px 0 0;
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .mobile-map {
+      width: 100%;
+      height: 260px;
+      margin-top: 16px;
+      border: 0;
+      border-radius: 8px;
+      display: block;
     }
 
     .slice {
@@ -172,6 +439,10 @@
     @media (min-width: 900px) {
       body {
         background: #fbf6ed;
+      }
+
+      .mobile-site {
+        display: none;
       }
 
       .page {
@@ -580,6 +851,106 @@
   </style>
 </head>
 <body>
+  <main class="mobile-site" aria-label="喫茶キャプテン スマホ版ホームページ">
+    <section class="mobile-hero" aria-label="ファーストビュー">
+      <a class="mobile-brand" href="#">
+        <span class="mobile-mark" aria-hidden="true"></span>
+        <span>喫茶キャプテン</span>
+      </a>
+      <div>
+        <h1>那珂川の風景に、<br>静かに寄り添う<br>喫茶店。</h1>
+        <p>1980年から続く、変わらない時間。<br>地域の皆さまの毎日に、ほっと息をつける一杯を。</p>
+      </div>
+    </section>
+
+    <section class="mobile-section" aria-label="お店のこと">
+      <p class="mobile-eyebrow">ABOUT</p>
+      <h2>お店のこと</h2>
+      <p class="mobile-copy">1980年、船乗りだった初代がこの地で「喫茶キャプテン」を開きました。2019年、想いを受け継ぎ、新しい航路が始まりました。この場所で過ごした時間が、誰かの記憶になっていく。これからも、変わらない風景の一部でありますように。</p>
+      <img class="mobile-photo" src="assets/photos/coffeeshop-captain_05.jpg" alt="">
+    </section>
+
+    <section class="mobile-section mobile-concept" aria-label="コンセプト">
+      <p class="mobile-eyebrow">CONCEPT</p>
+      <h2>時間がゆっくり流れる、<br>特別な場所へ。</h2>
+      <p class="mobile-copy">40年以上この場所で、人々の時間に寄り添ってきました。<br>これからも、変わらない味と空間をお届けします。</p>
+      <img class="mobile-photo" src="assets/concept-cropped.jpg" alt="">
+    </section>
+
+    <section class="mobile-section mobile-menu-section" aria-label="キャプテンの味">
+      <p class="mobile-eyebrow">MENU</p>
+      <h2>キャプテンの味</h2>
+      <div class="mobile-menu-grid">
+        <article class="mobile-card">
+          <img src="assets/photos/2021-04-08-12.jpg" alt="">
+          <div class="mobile-card-body">
+            <h3>ウインナーコーヒー</h3>
+            <p>たっぷりのクリームと深煎りコーヒー。</p>
+            <div class="mobile-price">¥630</div>
+          </div>
+        </article>
+        <article class="mobile-card">
+          <img src="assets/photos/2021-04-08-12-1.jpg" alt="">
+          <div class="mobile-card-body">
+            <h3>なつかしのあのナポリタン</h3>
+            <p>昔ながらの喫茶ごはん。サラダ・スープ付き。</p>
+            <div class="mobile-price">¥850</div>
+          </div>
+        </article>
+        <article class="mobile-card">
+          <img src="assets/photos/18-2.jpg" alt="">
+          <div class="mobile-card-body">
+            <h3>キャプテンブレンド</h3>
+            <p>定番のブレンドコーヒー。</p>
+            <div class="mobile-price">¥500</div>
+          </div>
+        </article>
+      </div>
+      <a class="mobile-button" href="menu.html">メニューを見る</a>
+    </section>
+
+    <section class="mobile-section mobile-staff-section" aria-label="スタッフ紹介">
+      <p class="mobile-eyebrow">STAFF</p>
+      <h2>私たちの想いと、<br>働く人たち</h2>
+      <p class="mobile-copy">それぞれの想いが、キャプテンをつくっています。</p>
+      <div class="mobile-staff-grid">
+        <article class="mobile-card">
+          <img src="assets/photos/coffeeshop-captain_09.jpg" alt="">
+          <div class="mobile-card-body">
+            <p class="mobile-role">オーナー</p>
+            <h3>木藤 亮太</h3>
+            <p>船乗りの経験を胸に、地域にとって心地よい場所を、次の世代につないでいきたい。</p>
+          </div>
+        </article>
+        <article class="mobile-card">
+          <img src="assets/photos/captain_ariyoshi-1-800x533.jpg" alt="">
+          <div class="mobile-card-body">
+            <p class="mobile-role">店長</p>
+            <h3>有吉 史朗</h3>
+            <p>ここに来るとほっとする場所、心がふくらむ時間を、今日も変わらず届けます。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mobile-section mobile-scenes-section" aria-label="風景・アクセス・店舗情報">
+      <p class="mobile-eyebrow">SCENES / ACCESS</p>
+      <h2>キャプテンのある風景</h2>
+      <div class="mobile-gallery-grid">
+        <img src="assets/photos/6-2.jpg" alt="">
+        <img src="assets/photos/4-2.jpg" alt="">
+        <img src="assets/photos/coffeeshop-captain_05.jpg" alt="">
+        <img src="assets/photos/coffeeshop-captain_04.jpg" alt="">
+      </div>
+      <div class="mobile-access-card">
+        <img src="assets/photos/captain_gaikan-1-800x532.jpg" alt="">
+        <h3>喫茶キャプテン</h3>
+        <p class="mobile-copy">福岡県那珂川市松木1-1<br>092-953-0985<br>営業時間 10:00 - 18:00（L.O.17:30）<br>定休日　水曜日</p>
+      </div>
+      <iframe class="mobile-map" title="喫茶キャプテン Google Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E5%96%AB%E8%8C%B6%E3%82%AD%E3%83%A3%E3%83%97%E3%83%86%E3%83%B3%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E9%82%A3%E7%8F%82%E5%B7%9D%E5%B8%82%E6%9D%BE%E6%9C%A81-1&output=embed"></iframe>
+    </section>
+  </main>
+
   <main class="page" aria-label="喫茶キャプテン ホームページ">
     <h1 class="sr-only">喫茶キャプテン</h1>
     <p class="sr-only">那珂川の風景に、静かに寄り添う喫茶店。1980年から続く、変わらない時間。</p>
